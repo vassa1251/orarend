@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Órarend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+   
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        h1, h2 {
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #3b82f6;
+        }
+
+        .table-container {
+            background: #1e1e1e;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            overflow: auto; 
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        thead th {
+            background-color: #3b82f6;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tbody tr {
+            transition: background 0.3s;
+        }
+
+        tbody tr:hover {
+            background-color: #333333;
+        }
+
+        tbody td {
+            background-color: #1e1e1e;
+            border-bottom: 1px solid #333333;
+            color: #f0f0f0;
+        }
+
+       
+        .schedule-table-container {
+            width: 90%;
+            max-width: 500px;
+            margin-top: 20px;
+            overflow: auto; 
+        }
+
+        footer {
+            margin-top: 20px;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+    
+        @media (max-width: 768px) {
+            h1, h2 {
+                font-size: 1.5em;
+            }
+            th, td {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+            table {
+                min-width: 600px; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1, h2 {
+                font-size: 1.3em;
+            }
+            th, td {
+                font-size: 0.8em;
+            }
+            .table-container, .schedule-table-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Órarend</h1>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Órák</th>
+                    <th>Hétfő</th>
+                    <th>Kedd</th>
+                    <th>Szerda</th>
+                    <th>Csütörtök</th>
+                    <th>Péntek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0. óra</td>
+                    <td>-</td>
+                    <td>Testnevelés</td>
+                    <td>-</td>
+                    <td>Angol nyelv</td>
+                    <td>Angol nyelv</td>
+                </tr>
+                <tr>
+                    <td>1. óra</td>
+                    <td>IKT projektmunka</td>
+                    <td>Testnevelés</td>
+                    <td>Magyar nyelv és irodalom</td>
+                    <td>Történelem</td>
+                    <td>Digitális kultúra</td>
+                </tr>
+                <tr>
+                    <td>2. óra</td>
+                    <td>Matematika</td>
+                    <td>Magyar nyelv és irodalom</td>
+                    <td>Testnevelés</td>
+                    <td>Honvédelem</td>
+                    <td>Digitális kultúra</td>
+                </tr>
+                <tr>
+                    <td>3. óra</td>
+                    <td>Angol</td>
+                    <td>Angol</td>
+                    <td>Komplex természettudomány</td>
+                    <td>IKT projektmunka</td>
+                    <td>Matematika</td>
+                </tr>
+                <tr>
+                    <td>4. óra</td>
+                    <td>Programozási alapok</td>
+                    <td>Osztályfőnöki</td>
+                    <td>Matematika</td>
+                    <td>Matematika</td>
+                    <td>Történelem</td>
+                </tr>
+                <tr>
+                    <td>5. óra</td>
+                    <td>Programozási alapok</td>
+                    <td>Informatika és távk.</td>
+                    <td>Magyar nyelv és irodalom</td>
+                    <td>Komplex természettudomány</td>
+                    <td>Komplex természettudomány</td>
+                </tr>
+                <tr>
+                    <td>6. óra</td>
+                    <td>Testnevelés</td>
+                    <td>Informatika és távk.</td>
+                    <td>Magyar nyelv és irodalom</td>
+                </tr>
+                <tr>
+                    <td>7. óra</td>
+                    <td>Történelem</td>
+                    <td>Informatika és távk.</td>
+                    <td>Angol nyelv</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8. óra</td>
+                    <td>Magyar nyelv és irodalom</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Csengetési rend</h2>
+
+    <div class="table-container schedule-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Óra</th>
+                    <th>Időpont</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0. óra</td><td>07:15 - 08:00</td></tr>
+                <tr><td>1. óra</td><td>08:00 - 08:45</td></tr>
+                <tr><td>2. óra</td><td>08:55 - 09:40</td></tr>
+                <tr><td>3. óra</td><td>09:50 - 10:35</td></tr>
+                <tr><td>4. óra</td><td>10:45 - 11:30</td></tr>
+                <tr><td>5. óra</td><td>11:40 - 12:25</td></tr>
+                <tr><td>Ebédszünet</td><td>12:25 - 12:45</td></tr>
+                <tr><td>6. óra</td><td>12:45 - 13:30</td></tr>
+                <tr><td>7. óra</td><td>13:35 - 14:20</td></tr>
+                <tr><td>8. óra</td><td>14:25 - 15:10</td></tr>
+                <tr><td>9. óra</td><td>15:15 - 16:00</td></tr>
+                <tr><td>10. óra</td><td>16:05 - 16:50</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        Készítette: Vass Ádám
+    </footer>
+
+</body>
+</html>
